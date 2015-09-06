@@ -1,0 +1,30 @@
+{
+  "name": "reasy-command-b28",
+  "version": "0.0.1",
+  "description": "b28 helper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwdgit/reasy-command-b28.git"
+  },
+  "keywords": [
+    "b28",
+    "reasy"
+  ],
+  "author": "lwdgit",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lwdgit/reasy-command-b28/issues"
+  },
+  "homepage": "https://github.com/lwdgit/reasy-command-b28#readme",
+  "directories": {
+    "example": "example"
+  },
+  "dependencies": {
+    "xlsx": "^0.8.0"
+  },
+  "devDependencies": {}
+}
