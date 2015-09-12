@@ -16,7 +16,7 @@ function createDir(dir, callback) {
 
         if (fs.existsSync(dir)) return;
 
-        while (!fs.existsSync(path.join(dir + '/..'))) { 
+        while (!fs.existsSync(path.join(dir, '/..'))) { 
             dir += '/..';
         }
 
