@@ -11,21 +11,19 @@ function writeObjSync(filepath, obj) {
 function createDir(dir, callback) {
     dir = path.resolve(dir);
     var originDir = dir;
+
     try {
-        if (!path.isAbsolute(dir)) {
-            dir = path.join(process.cwd(), dir);
-        }
+
         if (fs.existsSync(dir)) return;
 
-        while (!fs.existsSync(dir + '/..')) { //检查父目录是否存在
+        while (!fs.existsSync(path.join(dir + '/..'))) { 
             dir += '/..';
         }
 
-        while (originDir.length <= dir.length) { //如果目录循环创建完毕，则跳出循环
-            fs.mkdirSync(dir, '0777');
+        while (originDir.length <= dir.length) { 
+            fs.mkdirSync(path.resolve(dir), '0777');
             dir = dir.substring(0, dir.length - 3);
         }
-
         if (callback) callback();
     } catch (e) {
         console.log(e);
