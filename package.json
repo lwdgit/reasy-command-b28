@@ -1,6 +1,6 @@
 {
   "name": "reasy-command-b28",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "b28 helper",
   "main": "index.js",
   "scripts": {
